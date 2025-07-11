@@ -45,7 +45,6 @@ body, html {
   position: absolute;
   inset: 0;
   background: url('images/unnamed.jpg') no-repeat center center / cover;
-  filter: blur(px); /* Adjust blur level */
   z-index: 0;
 }
 
@@ -318,16 +317,62 @@ body, html {
   font-size: 0.95rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
+  .diagnostic-section {
+    padding: 40px 20px;
+  }
+
   .section-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  .section-header p {
+    font-size: 18px !important;
+  }
+
+  .main-benefits {
+    font-size: 16px;
   }
 
   .card-row {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .diag-card {
+    padding: 20px 15px;
+  }
+
+  .diag-card h3 {
+    font-size: 20px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .btn-small {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .section-divider {
+    margin: 30px 0;
+  }
+
+  h1, h2 {
+    font-size: 20px !important;
+  }
+
+  p {
+    font-size: 16px !important;
   }
 }
+
+
+
+
 
 
 

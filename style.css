@@ -45,13 +45,13 @@ body, html {
   position: absolute;
   inset: 0;
   background: url('images/unnamed.jpg') no-repeat center center / cover;
-  filter: blur(25px); /* Adjust blur level */
+  filter: blur(px); /* Adjust blur level */
   z-index: 0;
 }
 
 /* Overlay for dark shade and content */
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.4); /* Darken for better readability */
+  /* background: rgba(0, 0, 0, 0.4); */
   width: 100%;
   height: 100%;
   padding: 60px 40px;

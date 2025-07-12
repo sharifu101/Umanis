@@ -47,6 +47,15 @@ body, html {
   background: url('images/unnamed.jpg') no-repeat center center / cover;
   z-index: 0;
 }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0.5;
+}
+
+
 
 /* Overlay for dark shade and content */
 .hero-overlay {
@@ -375,15 +384,21 @@ body, html {
 
   .diag-card h3 {
     font-size: 20px;
+    margin-bottom: 6px;
   }
 
+  .diag-card p,
   .price {
-    font-size: 16px;
+    margin-bottom: 2px !important; /* 🟡 Tighter spacing under each paragraph */
   }
 
   .btn-small {
     font-size: 16px;
     padding: 10px 20px;
+    display: block;
+    margin-top: 8px !important; /* 🟡 Less gap between last text and button */
+    margin-bottom: 0;
+    text-align: center;
   }
 
   .section-divider {
@@ -398,22 +413,6 @@ body, html {
     font-size: 16px !important;
   }
 }
-
-@media (max-width: 768px) {
-  /* ...existing styles... */
-
-  .btn-small {
-    font-size: 16px;
-    padding: 10px 20px;
-    display: block;
-    margin: 20px auto 0 auto;
-    text-align: center;
-  }
-
-  /* ...rest of your styles... */
-}
-
-
 
 
 
@@ -489,6 +488,12 @@ body, html {
 .ozono-btn:hover {
   background-color: #e3b15c;
   color: #000;
+}
+
+@media (max-width: 768px) {
+  .ozono-btn {
+    margin-top: 4px !important; /* or 2px for even less space */
+  }
 }
 
 
@@ -595,6 +600,53 @@ body, html {
 
   .doctor-info-content {
     margin-left: 0;
+  }
+
+  .doctor-info-content h2 {
+    font-size: 34px;
+    line-height: 1.3;
+  }
+
+  .highlight {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: 16px;
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .doctor-image img {
+    width: 280px;
+    height: 280px;
+    margin-left: 0;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .doctor-info-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .doctor-info-content {
+    margin-left: 0;
+    order: 2; /* 👇 Pushes text content below image */
+  }
+
+  .doctor-image {
+    order: 1; /* 👆 Brings image above text */
+    margin-top: 0;
   }
 
   .doctor-info-content h2 {

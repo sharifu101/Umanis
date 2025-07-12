@@ -193,6 +193,35 @@ body, html {
 
 
 
+@media (max-width: 768px) {
+  .btn.filled {
+    background-color: #ffffff;
+    color: #000;
+  }
+
+  .btn.outlined {
+    border: 2px solid #ffffff;
+    color: #030303;
+  }
+
+  .btn.filled:hover {
+    background-color: #e3b15c;
+    color: #000;
+  }
+
+  .btn.outlined:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+
+
+
 
 /* second section */
 
@@ -370,6 +399,19 @@ body, html {
   }
 }
 
+@media (max-width: 768px) {
+  /* ...existing styles... */
+
+  .btn-small {
+    font-size: 16px;
+    padding: 10px 20px;
+    display: block;
+    margin: 20px auto 0 auto;
+    text-align: center;
+  }
+
+  /* ...rest of your styles... */
+}
 
 
 

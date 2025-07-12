@@ -416,8 +416,6 @@ body, html {
 
 
 
-
-/* third section */
 .ozonoterapia-section {
   background: #1a1a1a;
   color: #fff;
@@ -431,58 +429,54 @@ body, html {
 }
 
 .ozono-card {
+  background-color: #353535;
   padding: 20px;
   border-radius: 8px;
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  text-align: center;   /* Center text inside */
+  justify-content: flex-start;
+  text-align: center;
+  min-height: 520px; /* Adjust based on content */
 }
 
+.ozono-card h1,
 .ozono-card h3 {
-  font-size: 1.1rem;
+  font-size: 24px;
   margin-bottom: 10px;
   color: #fff;
+  letter-spacing: 1px;
 }
 
 .ozono-subtext {
-  font-size: 0.95rem;
+  font-size: 20px;
   color: #e3b15c;
-  margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.ozono-dark {
-  background-color: #353535;
+.ozono-card p {
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
 }
 
-.ozono-light {
-  background-color: #fff;
-  color: #000;
-}
-
-.ozono-light h3 {
-  color: #000;
-}
-
-.ozono-light .ozono-btn {
-  color: #000;
+.check {
+  color: #e3b15c;
+  font-weight: bold;
 }
 
 .ozono-btn {
   display: inline-block;
-  margin-top: 8px;
+  margin-top: auto; /* Align at the bottom */
   padding: 15px 20px;
-  background: transparent; /* remove background */
-  border: 1px solid #e3b15c; /* gold border */
+  background: transparent;
+  border: 1px solid #e3b15c;
   color: #e3b15c;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 1px;
-  font-size: 0.9rem;
+  border-radius: 2px;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
-  
-
 }
 
 .ozono-btn:hover {
@@ -491,8 +485,51 @@ body, html {
 }
 
 @media (max-width: 768px) {
+  .ozonoterapia-section {
+    padding: 50px 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .ozonoterapia-section {
+    padding: 40px 15px; /* reduced section padding */
+  }
+
+  .ozono-card {
+    padding: 15px;
+    min-height: 450px; /* reduce overall height on small screens */
+  }
+
+  .ozono-card h1,
+  .ozono-card h3 {
+    font-size: 20px; /* slightly smaller headings */
+  }
+
+  .ozono-subtext {
+    font-size: 18px;
+  }
+
+  .ozono-card p {
+    font-size: 15px;
+  }
+
   .ozono-btn {
-    margin-top: 4px !important; /* or 2px for even less space */
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .ozono-card p {
+    margin-bottom: 8px; /* reduce spacing */
+  }
+
+  .ozono-card div {
+    margin-bottom: 10px; /* reduce space below the text block */
+  }
+
+  .ozono-btn {
+    margin-top: 12px; /* reduce top space before button */
   }
 }
 

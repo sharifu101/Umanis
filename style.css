@@ -115,7 +115,7 @@ body, html {
 }
 
 .btn.filled {
-  background-color: #f3b43f;
+  background-color: #e3b15c;
   color: #000;
   border: none;
 }
@@ -232,14 +232,13 @@ body, html {
 
 
 
+
 /* second section */
 
 .diagnostic-section {
   background: #202020;
   color: #fff;
-  padding: 100px 50px;
   padding: 50px;
-
 }
 
 .section-header {
@@ -250,18 +249,7 @@ body, html {
 .section-header h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-}
-
-/* Main benefits list under heading */
-.main-benefits {
-  list-style: none;
-  padding-left: 0;
-}
-
-.main-benefits li {
-  color: #e3b15c;
-  font-size: 1rem;
-  margin-bottom: 10px;
+  
 }
 
 /* Horizontal line */
@@ -280,16 +268,23 @@ body, html {
   margin-bottom: 50px;
 }
 
+/* Card styling with aligned button */
 .diag-card {
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 20px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 620px; /* Uniform card height */
+  max-width: 270px;
+  gap: 10px;
 }
 
 .diag-card h3 {
   font-size: 1.1rem;
   margin-bottom: 10px;
-  color: #fff;
+  color: inherit;
 }
 
 .price {
@@ -307,7 +302,7 @@ body, html {
 
 /* Alternating box colors */
 .ass-color {
-  background-color: #1a1a1a;
+  background-color: #353535;
 }
 
 .white-color {
@@ -324,37 +319,46 @@ body, html {
   color: #e3b15c;
 }
 
-/* Button */
+/* Button base */
 .btn-small {
   display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #e3b15c;
-  color: #000;
-  text-decoration: none;
+  padding: 10px 20px;
   font-weight: bold;
+  font-size: 0.95rem;
+  text-decoration: none;
   border-radius: 4px;
-  font-size: 0.9rem;
   transition: 0.3s ease;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
 }
 
-.btn-small:hover {
+/* Transparent style (1st & 3rd card) */
+.btn-transparent {
+  background: transparent;
+  border: 1px solid #e3b15c;
+  color: #e3b15c;
+  padding: 20px;
+}
+
+.btn-transparent:hover {
+  background-color: #e3b15c;
+  color: #000;
+}
+
+/* Filled style (2nd & 4th card) */
+.btn-filled {
+  background-color: #e3b15c;
+  color: #000;
+  border: none;
+  padding: 20px;
+}
+
+.btn-filled:hover {
   background-color: #cfa046;
 }
 
-/* Clean icon list below boxes */
-.icon-list {
-  list-style: none;
-  padding-left: 0;
-  text-align: center;
-}
-
-.icon-list li {
-  color: #e3b15c;
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-}
-
+/* Mobile Styles */
 @media (max-width: 768px) {
   .diagnostic-section {
     padding: 40px 20px;
@@ -369,10 +373,6 @@ body, html {
     font-size: 18px !important;
   }
 
-  .main-benefits {
-    font-size: 16px;
-  }
-
   .card-row {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -380,6 +380,8 @@ body, html {
 
   .diag-card {
     padding: 20px 15px;
+    min-height: 100%;
+    
   }
 
   .diag-card h3 {
@@ -389,23 +391,18 @@ body, html {
 
   .diag-card p,
   .price {
-    margin-bottom: 2px !important; /* 🟡 Tighter spacing under each paragraph */
+    margin-bottom: 4px !important;
   }
 
   .btn-small {
     font-size: 16px;
     padding: 10px 20px;
-    display: block;
-    margin-top: 8px !important; /* 🟡 Less gap between last text and button */
+    margin-top: 10px !important;
     margin-bottom: 0;
-    text-align: center;
   }
 
-  .section-divider {
-    margin: 30px 0;
-  }
-
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 20px !important;
   }
 
@@ -415,6 +412,68 @@ body, html {
 }
 
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .diagnostic-section {
+    padding: 40px 20px;
+  }
+
+  .section-header h2 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  .section-header p {
+    font-size: 18px !important;
+  }
+
+  .card-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    display: grid;
+    place-items: center; /* ✅ Center cards horizontally */
+  }
+
+  .diag-card {
+    padding: 20px 15px;
+    min-height: 100%;
+    width: 100%;
+    max-width: 340px; /* ✅ Keeps width controlled and centered */
+  }
+
+  .diag-card h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .diag-card p,
+  .price {
+    margin-bottom: 4px !important;
+  }
+
+  .btn-small {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 10px !important;
+    margin-bottom: 0;
+  }
+
+  h1,
+  h2 {
+    font-size: 20px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+  }
+}
+
+
+
+
+
+
+/* third section */
 
 .ozonoterapia-section {
   background: #1a1a1a;
